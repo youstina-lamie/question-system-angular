@@ -1,0 +1,9 @@
+<div class="resultBody" [ngStyle]="{'color':pass?'green':'red'}">{{message}}</div>
+<div class="scoreDiv">
+    <div class="scoreResult row justify-content-center" [ngStyle]="{'color':pass?'green':'red'}">
+        Your Score: {{userr['score']}}/10
+    </div>
+    <div class='row justify-content-end'>
+        <button class="goToHomeButton col-3 btn"><a routerLink="/home">Go To Home Page</a></button>
+    </div>
+</div>

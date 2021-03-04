@@ -1,0 +1,24 @@
+<div class="container">
+    <img src="../../assets/coverPhoto.jfif" alt="Snow" class="coverImg" />
+    <div class="overlay"></div>
+
+    <div class="centered">
+        <h2 class="homeTitle">Certify your english proficiency today</h2>
+        <ul class="icons">
+            <li>Take the test online anytime, anywhere</li>
+            <li>
+                multiple-choice application which allow you to enter your answer within a limited time (60 sec) then the app calculates the right answers
+            </li>
+            <li>
+                If the time ended the app automatically redirects you to your score.
+            </li>
+        </ul>
+
+        <label for="name" class="labeInput">Please Enter Your Name</label>
+        <input type="text" name="" class="nameInput" id="name" #nameInput placeholder="Your Name..." />
+        <button type="submit" class="btn btn-primary homeBtn" (click)="testStarting(nameInput)">
+            Start
+        </button>
+
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="timer">
+    00:{{countdown}}
+</div>
+<div class="questionContainer">
+    <h1 class="questionBody">{{question['id']}}) {{question['bodyOfQuestion']}}</h1>
+    <div class="row">
+        <div class="col-lg-6 col-m-6 col-11" *ngFor="let choice of question['choices'];let i=index;">
+            <div class="answer">
+                <input [id]="choice" type="radio" class="radioButton mr-4 ml-2" name="choicee" [value]="choice" (change)=" checkInput(choice) " ngModel>
+                <label [for]="choice" class="labelOfAnswers">{{choice}}</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-end">
+        <button [ngStyle]="{'backgroundColor': buttonText === 'Next' ? ' rgba(23, 48, 74, .5)' : 'green' }" class="btn nextButton col-lg-3 col-m-4 col-6" (click)='nextQuestion()' [disabled]="!answerChoice">{{buttonText}}</button>
+    </div>
+</div>
